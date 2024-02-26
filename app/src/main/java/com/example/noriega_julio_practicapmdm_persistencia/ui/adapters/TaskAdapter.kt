@@ -1,0 +1,38 @@
+package com.example.noriega_julio_practicapmdm_persistencia.ui.adapters
+
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.example.noriega_julio_practicapmdm_persistencia.R
+import com.example.noriega_julio_practicapmdm_persistencia.data.model.Task
+
+class TaskAdapter(private val tasks: List<Task>) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.task_item, parent, false)
+        return TaskViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
+        val task = tasks[position]
+        holder.bind(task)
+    }
+
+    override fun getItemCount(): Int {
+        return tasks.size
+    }
+
+    inner class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val taskTitleTextView: TextView = itemView.findViewById(R.id.taskTitleTextView)
+        private val taskDescriptionTextView: TextView = itemView.findViewById(R.id.taskDescriptionTextView)
+        private val taskModuleIdTextView: TextView = itemView.findViewById(R.id.taskModuleIdTextView)
+
+        fun bind(task: Task) {
+            taskTitleTextView.text = task.title
+            taskDescriptionTextView.text = task.description
+            taskModuleIdTextView.text = task.moduleId.toString()
+        }
+    }
+}

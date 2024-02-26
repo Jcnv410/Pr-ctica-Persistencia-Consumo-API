@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Noriega_Julio_practicaPMDM_Persistencia</string>
+    <string name="addtasks">Añadir Tareas</string>
+    <string name="tareas">Tareas</string>
+    <string name="title_home">Home</string>
+    <string name="choose_module_prompt">Modulo</string>
+    <string name="title_Add_Tasks">Añadir Tareas</string>
+    <string name="title_All_Tasks">Todas las Tareas</string>
+    <string name="title_Module_Tasks">Modulos</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="module_1">Module 1</string>
+    <string name="module_2">Module 2</string>
+    <string name="module_3">Module 3</string>
+    <string name="add_task">Add Task</string>
+    <string name="modulos">Modulos</string>
+</resources>
